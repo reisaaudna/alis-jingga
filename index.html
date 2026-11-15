@@ -1,0 +1,118 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Laboratorium Siklus Air Digital untuk kelas V SD. Video, aplikasi, RPM, portofolio, dan artefak AI."><title>ALIS JINGGA Digital</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#06141f;--bg2:#0a2132;--card:#0d2a3f;--line:#1d4258;--fg:#e8f3f7;--mut:#93b0bf;--cy:#22b8cf;--or:#f28c28;--gr:#3ddc97;--ink:#06141f;
+--disp:"Space Grotesk","Segoe UI",system-ui,sans-serif;--body:"Inter","Segoe UI",system-ui,sans-serif}
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--cy)}
+.w{max-width:1080px;margin:0 auto}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:18px;color:var(--fg);text-decoration:none}
+.mark{width:36px;height:36px;border-radius:10px;border:2px solid var(--cy);display:grid;place-items:center;font-size:14px;color:var(--or);background:var(--bg2)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--mut);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:999px}
+nav a:hover,nav a:focus-visible{background:var(--bg2);color:var(--fg);outline:none}
+.hero{padding:clamp(28px,6vw,64px) 0 28px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-weight:600}
+h1{font-family:var(--disp);font-size:clamp(34px,6.4vw,60px);line-height:1.04;margin:10px 0 14px;letter-spacing:-.02em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--cy)}
+.lead{color:var(--mut);font-size:clamp(16px,2.2vw,19px);max-width:56ch;margin:0 0 22px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;border:1.5px solid var(--cy);color:var(--fg)}
+.btn.pri{background:var(--cy);color:var(--ink)}
+.btn.or{background:var(--or);border-color:var(--or);color:var(--ink)}
+.btn:hover,.btn:focus-visible{filter:brightness(1.12);outline:2px solid var(--fg);outline-offset:2px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.chip{font-size:12.5px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+.hero-shot{position:relative;justify-self:center;width:min(100%,290px)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--disp);font-size:clamp(24px,4vw,34px);margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--mut);margin:0 0 24px;max-width:62ch}
+.phone{margin:0;flex:0 0 232px;scroll-snap-align:start}
+.screen{border-radius:26px;border:6px solid #020a10;background:#020a10;overflow:hidden;box-shadow:0 0 0 1.5px var(--line),0 18px 40px rgba(0,0,0,.45);aspect-ratio:540/1000}
+.screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.phone figcaption{font-size:13px;color:var(--mut);margin-top:10px;padding:0 4px}
+.phone figcaption b{display:block;color:var(--fg);font-family:var(--disp);font-size:14px}
+.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;-webkit-overflow-scrolling:touch}
+.rail:focus-visible{outline:2px solid var(--cy)}
+.hero-shot .phone{flex:none}
+.open{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:8px}
+.open .url{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--mut);word-break:break-all;margin:8px 0 0}
+.qr{width:112px;height:112px;border-radius:10px;background:#fff;padding:6px}
+.vid{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#020a10;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.vid iframe,.facade{position:absolute;inset:0;width:100%;height:100%;border:0}
+.facade{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-decoration:none;color:var(--fg);background:radial-gradient(ellipse at 30% 20%,#0e3a52,#06141f 70%)}
+.play{width:76px;height:76px;border-radius:50%;background:var(--or);position:relative}
+.play::after{content:"";position:absolute;left:30px;top:22px;border-left:24px solid var(--ink);border-top:16px solid transparent;border-bottom:16px solid transparent}
+.facade-t{font-weight:600}
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.doc .th{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:456/644}
+.doc .th img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.doc h3{font-family:var(--disp);font-size:19px;margin:0}
+.doc p{margin:0;color:var(--mut);font-size:14px;flex:1}
+.doc .row{display:flex;gap:8px;flex-wrap:wrap}
+.doc .btn{padding:8px 14px;font-size:14px;border-radius:10px}
+.tag{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--or);font-weight:600}
+.ex{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;margin-top:28px}
+.ex img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:6px}
+.step{border-left:3px solid var(--cy);padding:2px 0 2px 14px}
+.step:nth-child(2){border-color:var(--or)}.step:nth-child(3){border-color:var(--gr)}.step:nth-child(4){border-color:#6f8cff}
+.step b{font-family:var(--disp);display:block}
+.step span{color:var(--mut);font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.about dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px}
+.about dt{color:var(--mut)}.about dd{margin:0}
+footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--mut);font-size:13.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:820px){.hero,.ex,.about{grid-template-columns:1fr}.docs{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.open{grid-template-columns:1fr}.qr{justify-self:start}.hero-shot{order:-1;width:min(100%,230px)}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.phone{flex-basis:210px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div class="w">
+<header class="top"><a class="brand" href="#beranda"><span class="mark">AJ</span>ALIS JINGGA</a>
+<nav aria-label="Menu utama"><a href="#aplikasi">Aplikasi</a><a href="#video">Video</a><a href="#dokumen">Dokumen</a><a href="#hasil">Contoh hasil</a><a href="#tentang">Tentang</a></nav></header>
+
+<div class="hero" id="beranda">
+<div><div class="eyebrow">Acer Smart School Award 2026 · Guru Kreatif</div>
+<h1>Laboratorium <em>Siklus Air</em> Digital untuk kelas V SD</h1>
+<p class="lead">Murid menguji siklus air, mengganggu lahan, memperbaiki ekosistem, lalu menjaga air lewat aksi nyata. Semuanya berjalan di peramban, tanpa instalasi.</p>
+<div class="btns"><a class="btn pri" href="https://alis-jingga-laboratorium-siklus-air-digital-8340.ai.studio" target="_blank" rel="noopener">Buka aplikasi ↗</a><a class="btn" href="#video">Tonton video</a><a class="btn" href="#dokumen">RPM, portofolio, artefak</a></div>
+<div class="meta"><span class="chip">IPAS · Fase C · Kurikulum Merdeka</span><span class="chip">SD Negeri 12 Benua Kayong, Ketapang</span><span class="chip">Pengembang: Syarifah Reisa Audina, S.Pd.</span></div></div>
+<div class="hero-shot"><figure class="phone"><div class="screen"><img src="assets/ui_beranda.jpg" alt="Beranda aplikasi ALIS JINGGA"></div></figure></div>
+</div>
+
+<section id="aplikasi"><div class="eyebrow">Aplikasi</div><h2>Lihat dulu, lalu coba sendiri</h2>
+<p class="sub">Tujuh layar dari aplikasi yang sedang berjalan. Geser ke samping untuk melihat alur Uji, Ganggu, Perbaiki, dan Jaga.</p>
+<div class="rail" tabindex="0" aria-label="Pratinjau layar aplikasi"><figure class="phone"><div class="screen"><img src="assets/ui_beranda.jpg" alt="Layar Beranda: Video tematik dan asesmen awal" loading="lazy"></div><figcaption><b>Beranda</b>Video tematik dan asesmen awal</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_model.jpg" alt="Layar Uji: Holo-Dome siklus air" loading="lazy"></div><figcaption><b>Uji</b>Holo-Dome siklus air</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_panel.jpg" alt="Layar Uji: Slider suhu, hujan, angin" loading="lazy"></div><figcaption><b>Uji</b>Slider suhu, hujan, angin</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_ganggu.jpg" alt="Layar Ganggu: Penampang bawah tanah" loading="lazy"></div><figcaption><b>Ganggu</b>Penampang bawah tanah</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_simulasi.jpg" alt="Layar Perbaiki: Lanskap sebelum dan sesudah" loading="lazy"></div><figcaption><b>Perbaiki</b>Lanskap sebelum dan sesudah</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_skor.jpg" alt="Layar Perbaiki: Scoreboard dan lencana" loading="lazy"></div><figcaption><b>Perbaiki</b>Scoreboard dan lencana</figcaption></figure><figure class="phone"><div class="screen"><img src="assets/ui_aksi.jpg" alt="Layar Jaga: Enam aksi nyata" loading="lazy"></div><figcaption><b>Jaga</b>Enam aksi nyata</figcaption></figure></div>
+<div class="open"><div><div class="tag">Aplikasi live</div><h3 style="font-family:var(--disp);margin:2px 0 4px;font-size:22px">Buka ALIS JINGGA Digital</h3>
+<a class="btn or" href="https://alis-jingga-laboratorium-siklus-air-digital-8340.ai.studio" target="_blank" rel="noopener">Buka aplikasi ↗</a><p class="url">https://alis-jingga-laboratorium-siklus-air-digital-8340.ai.studio</p></div>
+<div><img class="qr" src="assets/qr_app.png" alt="Kode QR menuju aplikasi ALIS JINGGA"></div></div>
+<div class="steps" style="margin-top:28px"><div class="step"><b>1 · Uji</b><span>Ubah suhu, hujan, dan angin pada Holo-Dome lima tahap siklus air.</span></div><div class="step"><b>2 · Ganggu</b><span>Bandingkan hutan, bukit gundul, dan area beton saat badai.</span></div><div class="step"><b>3 · Perbaiki</b><span>Pilih solusi dari sembilan kartu keputusan dan lihat dampaknya.</span></div><div class="step"><b>4 · Jaga</b><span>Lakukan aksi nyata, unggah foto, terima Kartu Detektif Air.</span></div></div>
+</section>
+
+<section id="video"><div class="eyebrow">Video</div><h2>Video ALIS JINGGA Digital</h2>
+<p class="sub">Ringkasan karya dan cara kerjanya di kelas.</p>
+<div class="vid"><iframe src="https://www.youtube.com/embed/anYvly3nPsU?rel=0" title="Video ALIS JINGGA Digital" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<p style="margin:12px 0 0;font-size:14px"><a href="https://youtu.be/anYvly3nPsU?si=md8nwqovVZs1dh-h" target="_blank" rel="noopener">Buka di YouTube ↗</a></p></section>
+
+<section id="dokumen"><div class="eyebrow">Dokumen</div><h2>RPM, portofolio, dan artefak AI</h2>
+<p class="sub">Tiga dokumen yang menjelaskan perencanaan, profil, dan bukti pengembangan. Klik untuk membuka PDF.</p>
+<div class="docs">
+<article class="doc"><div class="th"><img src="assets/th_rpm.jpg" alt="Sampul RPM" loading="lazy"></div><div class="tag">14 halaman</div><h3>Rencana Pembelajaran Mendalam</h3><p>RPM IPAS kelas V: tujuan, desain, langkah pembelajaran, dan asesmen untuk materi siklus air.</p><div class="row"><a class="btn pri" href="docs/RPM_ALIS_JINGGA_Digital.pdf" target="_blank" rel="noopener">Buka PDF</a></div></article>
+<article class="doc"><div class="th"><img src="assets/th_porto.jpg" alt="Sampul Portofolio" loading="lazy"></div><div class="tag">13 halaman</div><h3>Portofolio Guru Kreatif</h3><p>Profil, riwayat, prestasi, dan karya inovasi Syarifah Reisa Audina untuk ASSA 2026.</p><div class="row"><a class="btn pri" href="docs/Portofolio_Guru_Kreatif_ASSA_2026.pdf" target="_blank" rel="noopener">Buka PDF</a></div></article>
+<article class="doc"><div class="th"><img src="assets/th_artefak.jpg" alt="Sampul Evidence Artefak AI" loading="lazy"></div><div class="tag">27 halaman</div><h3>Evidence / Artefak AI</h3><p>24 prompt, peran AI dan guru, bukti aplikasi live, hasil asesmen 16 murid, dan indeks bukti.</p><div class="row"><a class="btn pri" href="docs/Evidence_Artefak_AI_ALIS_JINGGA_ASSA_2026.pdf" target="_blank" rel="noopener">Buka PDF</a></div></article>
+</div></section>
+
+<section id="hasil"><div class="eyebrow">Contoh hasil</div><h2>Yang dibawa pulang murid</h2>
+<div class="ex"><div><p class="sub" style="margin-bottom:12px">Setelah menyelesaikan modul dan mengunggah minimal satu foto aksi nyata, murid menerima Kartu Detektif Air. Catatan investigasinya tersimpan di Jurnal Sains yang bisa dicetak atau diunduh sebagai berkas teks.</p>
+<p style="color:var(--mut);font-size:14px;margin:0">Contoh kartu di samping, nama murid disamarkan. Contoh jurnal lengkap ada di dokumen Evidence / Artefak AI, Bagian 07.</p></div>
+<img src="assets/ui_kartu.jpg" alt="Contoh Kartu Detektif Air dengan nama murid disamarkan" loading="lazy"></div></section>
+
+<section id="tentang"><div class="eyebrow">Tentang</div><h2>Pengembang</h2>
+<div class="about"><p class="sub" style="margin:0">Syarifah Reisa Audina, S.Pd. mengajar di SD Negeri 12 Benua Kayong, Kabupaten Ketapang, Kalimantan Barat. Latar belakang D-3 Manajemen Komputer dan Informatika dan S-1 PGSD mendorongnya membuat media belajar digital yang berangkat dari kebutuhan murid di kelasnya.</p>
+<dl><dt>Sekolah</dt><dd>SD Negeri 12 Benua Kayong</dd><dt>Wilayah</dt><dd>Ketapang, Kalimantan Barat</dd><dt>Mata pelajaran</dt><dd>IPAS, Fase C</dd><dt>Ajang</dt><dd>Acer Smart School Award 2026, Guru Kreatif</dd></dl></div></section>
+
+<footer><span>ALIS JINGGA Digital · SD Negeri 12 Benua Kayong</span><a href="https://alis-jingga-laboratorium-siklus-air-digital-8340.ai.studio" target="_blank" rel="noopener">Buka aplikasi ↗</a></footer>
+</div></body></html>
